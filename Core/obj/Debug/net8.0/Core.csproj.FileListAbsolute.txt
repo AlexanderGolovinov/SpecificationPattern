@@ -1,0 +1,11 @@
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/bin/Debug/net8.0/Core.deps.json
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/bin/Debug/net8.0/Core.dll
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/bin/Debug/net8.0/Core.pdb
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.AssemblyInfoInputs.cache
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.AssemblyInfo.cs
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.csproj.CoreCompileInputs.cache
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.dll
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/refint/Core.dll
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/Core.pdb
+/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/Debug/net8.0/ref/Core.dll
