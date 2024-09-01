@@ -1,8 +1,6 @@
 using Core.Entities;
 using Core.Interfaces;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
@@ -11,9 +9,11 @@ namespace API.Controllers;
 public class ProductsController(IProductRepository productRepository) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+    public async Task<ActionResult<IEnumerable<Product>>> GetProducts(string? brand, string? type, string? sort)
     {
-        return Ok(await productRepository.GetProductsAsync());
+        var availableBrands = await productRepository.GetBrandsAsync();
+        if (!availableBrands.Contains(brand)) return new EmptyResult();
+        return Ok(await productRepository.GetProductsAsync(brand, type, sort));
     }
 
     [HttpGet("{id:int}")]
@@ -21,7 +21,7 @@ public class ProductsController(IProductRepository productRepository) : Controll
     {
         var product = await productRepository.GetProductByIdAsync(id);
         if (product == null) return NotFound();
-        
+
         return product;
     }
 
@@ -30,7 +30,7 @@ public class ProductsController(IProductRepository productRepository) : Controll
     {
         return Ok(await productRepository.GetBrandsAsync());
     }
-    
+
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
     {
@@ -43,9 +43,7 @@ public class ProductsController(IProductRepository productRepository) : Controll
         productRepository.AddProduct(product);
 
         if (await productRepository.SaveChangesAsync())
-        {
-           return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
-        }
+            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
 
         return BadRequest("Problem Creating Product");
     }
@@ -57,11 +55,8 @@ public class ProductsController(IProductRepository productRepository) : Controll
             return BadRequest("Product ID mismatch.");
 
         productRepository.UpdateProduct(product);
-        if (await productRepository.SaveChangesAsync())
-        {
-            return NoContent();
-        }
-        
+        if (await productRepository.SaveChangesAsync()) return NoContent();
+
         return BadRequest("Problem updating the product");
     }
 
@@ -72,13 +67,10 @@ public class ProductsController(IProductRepository productRepository) : Controll
         if (product == null) return NotFound();
 
         productRepository.DeleteProduct(product);
-        if (await productRepository.SaveChangesAsync())
-        {
-            return product.Id;
-        }
+        if (await productRepository.SaveChangesAsync()) return product.Id;
         return BadRequest("Problem deleting the product");
     }
-    
+
     // Helper method to check if a product exists
     private bool ProductExists(int id)
     {
