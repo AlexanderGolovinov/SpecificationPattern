@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z7ENRlKox2Y3eYWT4HFJPAO1ZLxi/Ry0N473LpqjiFfBIUxNQjgPRLcXcl78ozWnCt4MjRwQUgu6WbVgE2t6kg==",
+  "dgSpecHash": "EJmhGOmmcU7K601hdsS74IKfUg1L92LYd7QzEdmuYfmT9vT7wfe37Z5sSNYMDQRBOUqPxRaxQt2qi5nzKyhcEw==",
   "success": true,
-  "projectFilePath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/Core.csproj",
+  "projectFilePath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

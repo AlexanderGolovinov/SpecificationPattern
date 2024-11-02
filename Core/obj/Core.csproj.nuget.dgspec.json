@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/Core.csproj": {}
+    "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/Core.csproj": {}
   },
   "projects": {
-    "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/Core.csproj": {
+    "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/Core.csproj",
+        "projectUniqueName": "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/Core.csproj",
+        "projectPath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/Core.csproj",
         "packagesPath": "/Users/alexandergolovinov/.nuget/packages/",
-        "outputPath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Core/obj/",
+        "outputPath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alexandergolovinov/.nuget/NuGet/NuGet.Config"

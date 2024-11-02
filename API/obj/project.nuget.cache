@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UsIY3WrQHoPMRE1LJVECLeRA2eRAOQypbXEWUDk+eQu2vInW3c278LYw0tntwLk345QRyL/IB9pj1Z1QyEnssA==",
+  "dgSpecHash": "5AwVEq/ki0JsDy0ywM0a3L9Ocz9cczZhQlzn08rLBW0/9JBty+wk0NTm0OwuLyf9bJlXJeJzc5N+lX87JG4+Lw==",
   "success": true,
-  "projectFilePath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/API/API.csproj",
+  "projectFilePath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/alexandergolovinov/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/alexandergolovinov/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",

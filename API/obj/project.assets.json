@@ -4106,11 +4106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/API/API.csproj",
+      "projectUniqueName": "/Users/alexandergolovinov/Desktop/ski-ecommerce/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/API/API.csproj",
+      "projectPath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/API/API.csproj",
       "packagesPath": "/Users/alexandergolovinov/.nuget/packages/",
-      "outputPath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/API/obj/",
+      "outputPath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alexandergolovinov/.nuget/NuGet/NuGet.Config"
@@ -4125,8 +4125,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/alexandergolovinov/Desktop/eCommerce/skinet/Infrastructure/Infrastructure.csproj"
+            "/Users/alexandergolovinov/Desktop/ski-ecommerce/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/alexandergolovinov/Desktop/ski-ecommerce/Infrastructure/Infrastructure.csproj"
             }
           }
         }
