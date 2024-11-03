@@ -25,19 +25,20 @@ public class ProductsController(IGenericRepository<Product> repository) : Contro
 
         return product;
     }
-
-    //TODO: Implement methods
-    // [HttpGet("brands")]
-    // public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
-    // {
-    //     return Ok(await productRepository.GetBrandsAsync());
-    // }
-    //
-    // [HttpGet("types")]
-    // public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
-    // {
-    //     return Ok(await productRepository.GetTypesAsync());
-    // }
+    
+    [HttpGet("brands")]
+    public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
+    {
+        var spec = new BrandListSpecification();
+        return Ok(await repository.ListAsync(spec));
+    }
+    
+    [HttpGet("types")]
+    public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
+    {
+        var spec = new TypeListSpecification();
+        return Ok(await repository.ListAsync(spec));
+    }
 
     [HttpPost]
     public async Task<ActionResult<Product>> CreateProduct(Product product)
