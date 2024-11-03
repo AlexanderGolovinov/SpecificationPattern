@@ -5,16 +5,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController(IGenericRepository<Product> repository) : ControllerBase
+public class ProductsController(IGenericRepository<Product> repository) : BaseApiController
 {
+    /**
+     * [FromQuery] example - /api/products?brands=Angular,React
+     */
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Product>>> GetProducts(string? brand, string? type, string? sort)
+    public async Task<ActionResult<IEnumerable<Product>>> GetProducts([FromQuery] ProductSpecParams specParams)
     {
-        var spec = new ProductSpecification(brand, type, sort);
-        var products = await repository.ListAsync(spec);
-        return Ok(products);
+        var spec = new ProductSpecification(specParams);
+        return await CreatePageResult(repository, spec, specParams.PageIndex, specParams.PageSize);
     }
 
     [HttpGet("{id:int}")]
@@ -25,14 +25,14 @@ public class ProductsController(IGenericRepository<Product> repository) : Contro
 
         return product;
     }
-    
+
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
     {
         var spec = new BrandListSpecification();
         return Ok(await repository.ListAsync(spec));
     }
-    
+
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
     {
