@@ -19,6 +19,16 @@ public class ProductSpecParams
 
     public string? Sort { get; set; }
 
+    private string _search;
+
+    public string? Search
+    {
+        get => _search ?? "";
+        set => _search = value;
+    }
+    
+    
+
     public List<string> Brands
     {
         get => _brands; //brands=angular,react
